@@ -1,0 +1,574 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.nav-bar{
+    display: flex;
+    padding: 10px;
+    color: #0f172a;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    z-index: 3;
+    position: sticky;
+    top: 0%;
+    
+}
+
+.nav-bar-links{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+}
+.nav-bar a:hover{
+    text-decoration: underline;
+
+}
+.nav-bar a{
+    text-decoration: none;
+    color: #0f172a;
+}
+.side-nav i{
+    display: flex;
+    margin-top: 13px;
+    margin-left: 5px;
+}
+.side-nav {
+    display: flex;
+    align-items: center;
+    display: none;
+}
+.side-nav-container{
+    background-color: #0f172a;
+    color: white;
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -60%;
+    transition: 2s;
+    z-index: 3;
+
+}
+.nav-bar-link{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 30px;
+}
+.nav-bar-link a:hover{
+    text-decoration: underline;
+
+}
+.nav-bar-link a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+.search{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 30px;
+}
+#search{
+    width: 100%;
+}
+.form-class{
+    border: #0f172a solid 3px;
+    border-radius: 50px;
+}
+.form-class div{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.form-class input{
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+}
+.form-class input:focus{
+    outline: none;
+}
+.form-class input:focus{
+    outline: none;
+}
+.form-class button{
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+}
+.welcome{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 20px;
+    margin-top: 15%;
+    z-index: 2;
+    margin-left: 15px;
+}
+.welcome div button{
+    background-color: #0f172a;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+}
+.welcome div button:hover{
+    cursor: pointer;
+}
+@media screen and (max-width:480px){
+    .nav-bar-links{
+        display: none;
+    }
+    .side-nav{
+        display: block;
+    }
+    .welcome{
+        margin-top: 30%;
+    }
+    .formula-1{
+        flex-direction: column;
+    }
+   main, 
+    .main, 
+    body {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .courses {
+        margin: 20px 0px !important;  
+        gap: 25px 0px !important;     
+        width: 100% !important;
+        padding: 20px;
+        margin: 50px;
+        
+    }
+    .course-box {
+        
+        flex: 0 0 100% !important; 
+        width: 90% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px; 
+    }
+   .course-box:hover {
+        transform: scale(1.03) !important; 
+      
+    }
+    .course-box img {
+        height: 200px;   
+    }
+    .course-box h3 {
+        padding: 15px 20px 5px 20px !important; 
+        margin: 0 !important;
+    }
+    .course-box button {
+        margin: 10px 20px 20px 20px !important; 
+    }
+}
+    
+
+
+.courses
+{  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 20px;
+    display: none;  
+}
+.course-box h3{
+    margin: 5px;
+    padding:5px;
+}
+.course-box:hover{
+    transform: scale(1.10);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 20px 35px, rgba(0, 0, 0, 0.25) 0px 15px 15px; 
+    cursor: pointer;
+}
+.course-box button:hover{
+    cursor: pointer;
+}
+.course-box{
+     flex: 0 0 23%; 
+     min-width: 200px;
+     margin-top: 30px;
+     background-color: whitesmoke;
+     border-radius: 10px;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+     transition-property: transform, box-shadow;
+     transition-duration: 0.3s;              
+     transition-timing-function: ease-out;
+    
+}
+.course-box img{
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: block;
+}
+.course-box button{
+    background-color: #0f172a;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.overlap{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.8;
+    z-index: 2;
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    background-color: #e2e8f0; 
+    padding: 30px;
+    width: calc(100% - 20px); 
+    max-width: 24rem; 
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; 
+}
+
+
+
+.popup h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+
+.popup input, 
+.popup select {
+    background-color: #f8fafc; 
+    border: 1px solid #cbd5e1; 
+    border-radius: 6px;
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    margin: 0 0 16px 0; 
+    color: #0f172a;
+    box-sizing: border-box; 
+}
+.course-choose{
+    background-color: #f8fafc; 
+    border: 1px solid #cbd5e1; 
+    border-radius: 6px;
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    margin: 0 0 16px 0; 
+    color: #0f172a;
+    box-sizing: border-box; 
+
+}
+
+
+.popup input:focus,
+.popup select:focus {
+    outline: 2px solid #0f172a; 
+    background-color: #ffffff;
+}
+
+
+.popup select option {
+    background-color: #ffffff;
+    color: #0f172a;
+}
+
+
+.popup div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+.popup div button {
+    flex: 1; 
+    padding: 12px;
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+
+.popup div button:last-child {
+    background-color: #64748b;
+}
+
+.popup div button:hover {
+    opacity: 0.9;
+}
+
+.about{
+    padding: 40px;
+    background-color: #0f172a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.about p{
+    margin-top: 10px;
+}
+.about table{
+    position: relative;
+    left: 10%;
+    margin-right: 10px;
+}
+.about table td{
+    padding-top: 10px;
+}
+.bullet{
+    padding: 3px;
+    
+}
+
+.formula-1{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    
+}
+.formula-1 div{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#search-btn:hover{
+       cursor: pointer;
+}
+#search::placeholder{
+    color: #0f172a;
+    font-size: 15px;
+    font-weight: 20px;
+}
+
+.register{
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap: 20px;
+}
+.register-box:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+}
+.register-box div button:hover{
+    cursor: pointer;
+}
+.register-box{
+    padding: 20px;
+    background-color: white;
+    color: black;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%; 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition-property: transform, box-shadow;
+    transition-duration: 0.3s;              
+    transition-timing-function: ease-out;
+}
+.register-box div button{
+    background-color: #fd6569;
+    color:black;
+    font-weight: 700;
+    font-size: medium;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 20px;
+    margin-top: 10px;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: #1D232C;
+    color: whitesmoke;
+    padding: 50px;
+    border-radius: 10px;
+    position: relative;
+    left: 10%;
+    top: 40px;
+}
+.feild input{
+    width: 95%;
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.feild input:focus{
+    outline: none;
+}
+.feild textarea{
+    width: 95%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.feild textarea:focus{
+    outline: none;
+}
+.feild button{
+    background-color:#fd6569;
+    color:black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.whatapp-group
+{
+    background-color:darkgreen;
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    font-size: xx-large;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: transform;
+    transition-duration: 0.3s;              
+    transition-timing-function: ease-out;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.whatapp-group:hover{
+    cursor: pointer;
+    transform: scale(1.10);
+}
+.whatapp-group:active{
+    transform: scale(1.10);
+}
+.whatapp-group a i{
+    color: white;
+}
+.course-detail{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin-top: 40px;
+    transition-property: transform;
+    transition-duration: 0.3s;              
+    transition-timing-function: ease-out;
+
+}
+.course-detail:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 18px 30px, rgba(0, 0, 0, 0.22) 0px 15px 15px;
+}
+.course-d button:hover{
+    cursor: pointer;
+}
+.course-d{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.course-d h2,h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.course-d table tr{
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.course-d p{
+    padding-left: 30px;
+}
+.course-d button{
+    background-color: #0f172a;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    margin-top: 15px;
+}
+.course-d table{
+    position: relative;
+    left: 5%;
+    margin-right: 10px;
+}
+.course-d table td{
+    padding-top: 10px;
+}
+

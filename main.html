@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="overlap"></div>
+    <div class="popup">
+        <h2 style="color: black;">Register</h2>
+        <input id="name" type="text" placeholder="Name:" style="color: black;">
+        <input id="email" type="email" placeholder="E-mail:">
+        <div>
+            <p class="course-choose">
+
+            </p>
+        </div>
+        <select id="Category" name="Category" required>
+            <option value="" disabled selected>Select Your Category</option>
+            <option>Student</option>
+            <option>Working Professional</option>
+            <option>Under Graduate</option>
+            <option>Post Graduate</option>
+            <option>Other</option>
+        </select>
+        <input id="phone-no" type="number" placeholder="Phone No:">
+        <div>
+            <button id="submit">Submit</button>
+            <button onclick="Cancel()">Cancel</button>
+        </div>
+
+
+    </div>
+
+    <div class="nav-bar">
+        <div class="side-nav" onclick="Show()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <h1>Course Hub</h1>
+        <div class="nav-bar-links">
+            <a href="main.html">
+                <p>Home</p>
+            </a>
+            <a href="course.html">
+                <p>Courses</p>
+            </a>
+            <a href="register.html">
+                <p>Registered</p>
+            </a>
+            <a href="contact.html">
+                <p>Contact Us</p>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="side-nav-container">
+        <p style="color:white;text-align: right; padding: 5px;" onclick="hide()">
+            <i class="fa solid fa-xmark"></i>
+        </p>
+
+        <div class="nav-bar-link">
+            <a href="main.html">
+                <p>Home</p>
+            </a>
+            <a href="course.html">
+                <p>Courses</p>
+            </a>
+            <a href="register.html">
+                <p>Registered</p>
+            </a>
+            <a href="contact.html">
+                <p>Contact Us</p>
+            </a>
+        </div>
+
+
+
+    </div>
+
+    <div class="main">
+        <div class="welcome">
+            <h1>Shape Your Future with the Right Courses</h1>
+            <p>Explore, Register, and Track Your Academic Journey.</p>
+            <p>Interested in learning? Click 'Get Started' to begin your journey.</p>
+            <div>
+                <button onclick="started()" class="start">Get Started</button>
+            </div>
+        </div>
+        <div class="formula">
+            <div class="formula-1">
+                <div>
+                    <i class="fa-regular fa-alarm-clock"></i>
+                    <h3>Learn New technology</h3>
+                    <p>Stay curious and embrace the power of new technology. Learn today to lead the future</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-greater-than-equal"></i>
+                    <h3>Partice More</h3>
+                    <p>Write more code, make mistakes, and keep learning. That's how great programmers are made.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrow-up-wide-short"></i>
+                    <h3>Keep Consistent</h3>
+                    <p>Stay consistent and trust the process. Small efforts every day lead to big results</p>
+                </div>
+           </div>
+        </div>   
+
+
+        <h1 style="padding: 20px;margin-top: 20px;display: none;" class="wanted">Most Wanted Course</h1>
+        <div class="courses">
+            <div class="course-box">
+                    <img src="image/ai.jpg" width="200" height="200">
+                    <h3 class="course-name">Artifical Intelligence</h3>
+                    <div>
+                        <button onclick="More(event)">More</button>
+                    </div>
+            </div>
+            <div class="course-box">
+                    <img src="image/ml.jpg" width="200" height="200">
+                    <h3 class="course-name">Machine Learning</h3>
+                    <div>
+                        <button onclick="More(event)">More</button>
+                    </div>
+             </div>
+             <div class="course-box">
+                    <img src="image/deep.jpg" width="200" height="200">
+                    <h3 class="course-name">Deep Learning</h3>
+                    <div>
+                        <button onclick="More(event)">More</button>
+                    </div>
+            </div>
+            <div class="course-box">
+                    <img src="image/cybersecurity.jpg" width="200" height="200">
+                    <h3 class="course-name">Cyber Security</h3>
+                    <div>
+                        <button onclick="More(event)">More</button>
+                    </div>
+            </div>
+            <div class="course-box">
+                    <img src="image/python2.jpg" width="200" height="200">
+                    <h3 class="course-name">Python</h3>
+                    <div>
+                        <button onclick="More(event)">More</button>
+                    </div>
+            </div>
+            <div class="course-box">
+                    <img src="image/ds.jpg" width="200" height="200">
+                    <h3 class="course-name">Data Science</h3>
+                    <div>
+                        <button onclick="More(event)">More</button>
+                    </div>
+            </div>
+            <div class="course-box">
+                    <img src="image/monogo.jpg" width="200" height="200">
+                    <h3 class="course-name">Monogo DB</h3>
+                    <div>
+                        <button onclick="More(event)">More</button>
+                    </div>
+            </div>
+            <div class="course-box">
+                    <img src="image/cloud.jpg" width="200" height="200">
+                    <h3 class="course-name">Cloud Computing</h3>
+                    <div>
+                        <button onclick="More(event)">More</button>
+                    </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="course-detail" style="display: none;">
+        <div class="course-d">
+                <h1>ARTIFICAL INTELLIGENCE</h1>
+                <h2>Course Overview</h2>
+                <p>Dive into the fundamentals of Artificial Intelligence, exploring how machines mimic human intelligence to solve complex real-world problems. This hands-on, Python-driven course bridges the gap between theoretical math and practical engineering, preparing you for foundational projects in machine learning, data science, and deep neural networks.</p>
+                <h3>Module 1: Foundational Math & Data Elements</h3>
+                <p>Before training smart models,you need to understand the underlying mathematics and structural logic that power AI frameworks</p>
+                <table>
+                   <tr>
+                        <td><h4>Linear Algebra Fundamentals:</h4>Matrix multiplication, vectors, and linear transformations ($Ax = \lambda x$).</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Calculus Core:</h4> Partial derivatives, gradients, and the Chain Rule for optimization tracking.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Probability & Information Theory:</h4> Probability distributions, conditional probability, Bayes’ Theorem, and entropy metrics.</td>
+                    </tr>
+                </table>
+                <h3>Module 2: Intelligent Search & Logic Systems</h3>
+                <p>Learn how classical AI programs navigate complex problem domains, find optical pathways, and process constraints</p>
+                <table>
+                   <tr>
+                        <td><h4>Uninformed Search Strategies:</h4>Breadth-First Search (BFS) and Depth-First Search (DFS).</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Informed (Heuristic) Search:</h4>Greedy Best-First Search and $A^*$ Search algorithms.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Adversarial Game Theory:</h4> MiniMax algorithm framework and Alpha-Beta Pruning optimized for logical choice matrices.</td>
+                    </tr>
+                </table>
+                <h3>Module 3: Hands-On Production Libraries</h3>
+                <p>Master the essential engineering toolkits required to clean data, manipulate high-dimensional arrays, and build robust automated pipelines.</p>
+                <table>
+                   <tr>
+                        <td><h4>NumPy:</h4>High-performance vector operations and multi-dimensional matrix manipulation.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Pandas:</h4>Advanced data cleaning, preprocessing, parsing missing attributes, and feature transformations.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Matplotlib & Seaborn:</h4>Generating analytical data visualizations, correlation heatmaps, and outlier charts.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 4: Machine Learning Core (Scikit-Learn)</h3>
+                <p>Transition into foundational statistical learning techniques for predictive modeling.</p>
+                <table>
+                   <tr>
+                        <td><h4>Supervised Learning:</h4>Linear Regression, Logistic Regression, and Decision Trees.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Unsupervised Learning:</h4>Clustering frameworks ($K$-Means, Hierarchical) and Dimensionality Reduction (PCA).</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Model Evaluation:</h4>Precision, Recall, F1-Score, ROC-AUC metrics, and cross-validation methodologies.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 5: Introduction to Neural Networks & Deep Learning</h3>
+                <p>Unpack the architectural systems behind modern generative frameworks and automated recognition pipelines.</p>
+                <table>
+                   <tr>
+                        <td><h4>The Artificial Perceptron:</h4>Mathematical breakdown of artificial neurons, weighted inputs, and threshold thresholds.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Deep Feedforward Networks:</h4>Multi-layer feedforward setups, hidden processing layers, and activation paths (ReLU, Sigmoid, Softmax).</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Training & Backpropagation:</h4>Loss calculation structures and Gradient Descent optimization routines ($w \leftarrow w - \alpha \frac{\partial L}{\partial w}$).</td>
+                    </tr>
+                </table>
+               
+                <button onclick="Register(event)">Register</button>
+                <button class="home" onclick="hideDetails()">Back to courses</button>
+
+        </div>
+        <div class="course-d" style="display: none;">
+                <h1>MACHINE LEARNING</h1>
+                <h2>Course Overview</h2>
+                <p>Master the core statistical algorithms and predictive modeling techniques used by data scientists to extract patterns from complex datasets. This course offers a deep dive into building, evaluating, and fine-tuning predictive systems using Python, enabling you to build intelligent applications that adapt and learn over time.</p>
+                
+                <h3>Module 1: Preprocessing & Predictive Diagnostics</h3>
+                <p>Learn how to process noisy raw datasets, handle missing variables, and transform your data to meet mathematical assumptions.</p>
+                <table>
+                   <tr>
+                        <td><h4>Data Cleansing & Imputation:</h4>Strategies for identifying anomalies, encoding categorical variables, and treating missing cells.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Feature Engineering & Scaling:</h4>Applying Standardization and Normalization to balance magnitude influence across predictors.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Feature Selection:</h4>Using variance thresholds, correlation analysis, and wrapper methods to eliminate redundant dimensions.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 2: Supervised Learning (Regression Focus)</h3>
+                <p>Implement statistical learning pipelines designed to predict continuous numeric outcomes based on linear or non-linear trend structures.</p>
+                <table>
+                   <tr>
+                        <td><h4>Linear & Multiple Regression:</h4>Formulating optimal slope intercept calculations minimizing ordinary least squares error functions.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Regularization Implementations:</h4>Mitigating model overfitting patterns using Ridge ($L_2$) and Lasso ($L_1$) constraint penalties.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Non-Linear Trend Regression:</h4>Deploying Support Vector Regression (SVR) systems and multi-split Regression Trees.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 3: Supervised Learning (Classification Focus)</h3>
+                <p>Deploy discrete category classifiers to predict complex group boundaries, text categories, or risk metrics.</p>
+                <table>
+                   <tr>
+                        <td><h4>Logistic Models & Probabilities:</h4>Mapping odds ratios into discrete classification decisions using the Sigmoid curve framework.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Tree-Based Ensemble Classifiers:</h4>Harnessing groups of Decision Trees through Random Forests and Gradient Boosting models (XGBoost).</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Boundary Optimization:</h4>Constructing maximal-margin classifiers with Support Vector Machines (SVM) via custom kernel functions.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 4: Unsupervised Pattern Extraction</h3>
+                <p>Discover underlying cluster trends, categorical relationships, or dimensional compressions within unlabelled data structures.</p>
+                <table>
+                   <tr>
+                        <td><h4>Partitioning Algorithms:</h4>Configuring centroid adjustments with $K$-Means and building distance-linked Hierarchical dendrograms.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Density-Based Layouts:</h4>Isolating complex structural groupings and outlier distributions using DBSCAN clustering tools.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Dimensionality Reductions:</h4>Projecting expansive workspaces down to core feature planes with Principal Component Analysis (PCA).</td>
+                    </tr>
+                </table>
+
+                <h3>Module 5: Validation & Production Optimization</h3>
+                <p>Evaluate your models accurately to guarantee stability and prevent overfitting on unseen production data.</p>
+                <table>
+                   <tr>
+                        <td><h4>Validation Split Optimization:</h4>Implementing $K$-Fold Cross-Validation splits to check performance consistency.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Diagnostic Performance Metrics:</h4>Parsing Confusion Matrices, ROC Curves, Precision-Recall tradeoffs, and F1-scores.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Hyperparameter Optimization:</h4>Automating hyperparameter search routines with Grid Search and Randomized Search algorithms.</td>
+                    </tr>
+                </table>
+               
+                <button onclick="Register(event)">Register</button>
+                <button class="home" onclick="hideDetails()">Back to courses</button>
+
+        </div>
+        <div class="course-d" style="display: none;">
+                <h1>DEEP LEARNING</h1>
+                <h2>Course Overview</h2>
+                <p>Step beyond traditional algorithms and dive into the architecture of modern Deep Neural Networks. This advanced engineering course covers how to build, optimize, and deploy multi-layered networks capable of processing unstructured data like text, images, and time-series sequences. You will write hands-on production code using frameworks like PyTorch or TensorFlow.</p>
+                
+                <h3>Module 1: Foundations of Deep Neural Networks</h3>
+                <p>Transition from classic linear models into multi-layered connectionist architectures, looking at hidden layer operations and activation calculations.</p>
+                <table>
+                   <tr>
+                        <td><h4>The Mathematical Neuron:</h4>How inputs are scaled by weights ($z = \sum w_i x_i + b$) and mapped via non-linear activation functions.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Activation Functions:</h4>Comparing gradient propagation behaviors across Sigmoid, Tanh, ReLU, and Leaky ReLU layers.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Deep Forward Propagation:</h4>Tracing matrix computations and dimensional changes across hidden dense layers to an output vector.</td>
+                   </tr>
+                </table>
+
+                <h3>Module 2: Optimization & Loss Backpropagation</h3>
+                <p>Demystify how a network learns by computing objective loss gradients and tracking errors backward across layer connections.</p>
+                <table>
+                   <tr>
+                        <td><h4>Loss & Cost Formulation:</h4>Configuring Binary Cross-Entropy, Categorical Cross-Entropy, and Mean Squared Error metrics.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>The Backpropagation Algorithm:</h4>Calculating weight adjustments at each layer using partial derivatives and calculus chain-rule chains.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Advanced Optimizers:</h4>Accelerating convergence speeds and bypassing saddle points using Stochastic Gradient Descent (SGD) with Momentum, RMSprop, and Adam.</td>
+                   </tr>
+                </table>
+
+                <h3>Module 3: Computer Vision with Convolutional Networks (CNNs)</h3>
+                <p>Build spatial processing pipelines optimized for processing pixel matrices, object classification, and spatial feature maps.</p>
+                <table>
+                   <tr>
+                        <td><h4>Convolution Operations:</h4>Applying spatial filters, kernels, padding rules, and stride configurations to extract feature edges.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Pooling Mechanics:</h4>Reducing computational footprint and establishing spatial invariance using Max Pooling and Average Pooling.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Classic Architectures:</h4>Reviewing structural blueprints of industry benchmarks like LeNet-5, AlexNet, and ResNet skip-connections.</td>
+                   </tr>
+                </table>
+
+                <h3>Module 4: Sequence Modeling with Recurrent Networks (RNNs)</h3>
+                <p>Deploy specialized sequential processing architectures built to parse historical memory steps, time-series data, and natural text.</p>
+                <table>
+                   <tr>
+                        <td><h4>Recurrent Loop Dynamics:</h4>Maintaining internal state vectors across historical timestamps to evaluate ongoing time sequences.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Vanishing Gradient Bottlenecks:</h4>Analyzing why simple RNN layers fail to maintain long-range context dependencies over extensive time windows.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Gated Memory Cells:</h4>Overcoming historical decay tracking patterns using Long Short-Term Memory (LSTM) blocks and Gated Recurrent Units (GRUs).</td>
+                   </tr>
+                </table>
+
+                <h3>Module 5: Regularization & Hyperparameter Tuning</h3>
+                <p>Apply optimization constraints and structural adjustment procedures to stabilize deep architecture training cycles.</p>
+                <table>
+                   <tr>
+                        <td><h4>Overfitting Prevention:</h4>Implementing Dropout masks, Weight Decay ($L_2$ regularization), and Early Stopping metrics.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Internal Structural Stability:</h4>Accelerating training convergence and normalizing layer input distribution arrays using Batch Normalization.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Data Augmentation:</h4>Artificially expanding dataset volumes using random image rotations, cropping adjustments, and noise injections.</td>
+                   </tr>
+                </table>
+               
+                <button onclick="Register(event)">Register</button>
+                <button class="home" onclick="hideDetails()">Back to courses</button>
+
+        </div>
+        <div class="course-d" style="display: none;">
+                <h1>CYBER SECURITY</h1>
+                <h2>Course Overview</h2>
+                <p>Gain a comprehensive understanding of modern digital defense, risk management, and infrastructure protection. This course bridges architectural security principles with hands-on technical skills, covering defensive strategies, penetration testing basics, cryptography, and network vulnerabilities to prepare you for mitigating real-world cyber threats.</p>
+                
+                <h3>Module 1: Foundations of Information Security</h3>
+                <p>Understand the core security frameworks, governance models, and authorization standards that dictate security infrastructure.</p>
+                <table>
+                   <tr>
+                        <td><h4>The CIA Triad:</h4>Balancing Confidentiality, Integrity, and Availability across corporate hardware and data assets.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Identification & Access Controls:</h4>Implementing Multi-Factor Authentication (MFA), Role-Based Access Control (RBAC), and Least Privilege models.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Threat Actor Typologies:</h4>Classifying threat methodologies, attack vectors, and social engineering techniques (phishing, vishing).</td>
+                    </tr>
+                </table>
+
+                <h3>Module 2: Network & Infrastructure Security</h3>
+                <p>Learn how to audit, configure, and secure network environments against unauthorized intrusions and data exfiltration.</p>
+                <table>
+                   <tr>
+                        <td><h4>Firewalls & Border Controls:</h4>Deploying packet-filtering firewalls, stateful inspection systems, and Intrusion Detection/Prevention Systems (IDS/IPS).</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Protocols & Port Security:</h4>Securing communication spaces using SSH, TLS/SSL, HTTPS, and managing exposed network ports.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Virtual Private Networks (VPNs):</h4>Establishing secure point-to-point remote tunnels using IPsec and OpenVPN protocols.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 3: Application & Operating System Hardening</h3>
+                <p>Analyze how to discover system vulnerabilities, secure database pathways, and patch configurations inside target operating networks.</p>
+                <table>
+                   <tr>
+                        <td><h4>OWASP Top 10 Vulnerabilities:</h4>Mitigating core web application risks including SQL Injection (SQLi) and Cross-Site Scripting (XSS).</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Patch Management & Baseline Audits:</h4>Automating software patches and restricting unauthorized system privileges in Windows and Linux.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Malware Diagnostics:</h4>Identifying execution behaviors of trojans, ransomware, rootkits, and polymorphic worms.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 4: Practical Cryptography</h3>
+                <p>Explore the mathematical frameworks used to encrypt data streams at rest and in transit across unsecured spaces.</p>
+                <table>
+                   <tr>
+                        <td><h4>Symmetric Encryption Standards:</h4>Utilizing high-speed secret key algorithms like AES (Advanced Encryption Standard) for bulk encryption.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Asymmetric Infrastructure:</h4>Managing public-private key pairings utilizing RSA algorithms and Diffie-Hellman key exchanges.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Hashing & Digital Signatures:</h4>Verifying data authenticity and file integrity metrics using SHA-256 and MD5 hashes.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 5: Incident Response & Defensive Operations</h3>
+                <p>Formulate rapid containment protocols, log monitoring strategies, and regulatory recovery frameworks.</p>
+                <table>
+                   <tr>
+                        <td><h4>SIEM Log Aggregation:</h4>Monitoring system events using Security Information and Event Management (SIEM) tools like Splunk or ELK.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Incident Response Lifecycle:</h4>Executing Preparation, Detection, Containment, Eradication, and Recovery phases.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Compliance Frameworks:</h4>Reviewing privacy compliance standards and regulatory baselines including GDPR, HIPAA, and PCI-DSS.</td>
+                    </tr>
+                </table>
+               
+                <button onclick="Register(event)">Register</button>
+                <button class="home" onclick="hideDetails()">Back to courses</button>
+        </div>
+
+        <div class="course-d" style="display: none;">
+                <h1>PYTHON</h1>
+                <h2>Course Overview</h2>
+                <p>Go from absolute basics to advanced software engineering patterns with the world's most versatile programming language. This practical course covers clean syntax rules, core data structures, object-oriented concepts, and specialized library integrations, allowing you to write highly optimized code for automation, web backend applications, or data scripts.</p>
+                
+                <h3>Module 1: Core Syntax & Computational Foundations</h3>
+                <p>Establish basic programming principles, logical flow handling, and dynamic type configurations in Python.</p>
+                <table>
+                   <tr>
+                        <td><h4>Variables & Primary Types:</h4>Working with dynamic typing across integers, floats, booleans, and string objects.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Control Flow Engines:</h4>Structuring operational logic blocks with conditional statements (`if-elif-else`) and loop matrices (`for`, `while`).</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Function Scoping & Design:</h4>Building modular code via functions, managing local/global scopes, and structuring keyword arguments.</td>
+                   </tr>
+                </table>
+
+                <h3>Module 2: Built-in Data Collections</h3>
+                <p>Master Python’s native storage sequences to manipulate, slice, and parse complex collections of structured elements efficiently.</p>
+                <table>
+                   <tr>
+                        <td><h4>Lists & Tuples:</h4>Utilizing index patterns, mutability attributes, and sequence slicing methodologies (`[start:stop:step]`).</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Dictionaries & Sets:</h4>Leveraging high-speed key-value lookups, hashing mechanics, and duplicate extraction routines.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Comprehensions:</h4>Writing expressive, optimized single-line list, dict, and set generation pipelines.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 3: Object-Oriented Programming (OOP)</h3>
+                <p>Transition into production-grade engineering structures by defining modular classes and reuse models.</p>
+                <table>
+                   <tr>
+                        <td><h4>Classes & Instances:</h4>Constructing blueprint frameworks using constructors (`__init__`), variables, and self-referencing instance actions.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Inheritance & Polymorphism:</h4>Extending base architectures to derived configurations and overriding method behaviors seamlessly.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Encapsulation & Properties:</h4>Protecting internal entity integrity metrics using private fields and custom getter/setter access decorators.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 4: Robust Handling & File Operations</h3>
+                <p>Equip your automation programs to handle execution runtime faults and parse files stored on local disks safely.</p>
+                <table>
+                   <tr>
+                        <td><h4>Exception Management:</h4>Isolating system failures elegantly using robust structural blocks (`try-except-else-finally`).</td>
+                   </tr>
+                    <tr>
+                        <td><h4>I/O Operations:</h4>Reading, writing, and appending standard text or JSON formatting data structures across local disk surfaces.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Context Managers:</h4>Guaranteeing automated system cleanups and resource releases via explicit `with` blocks.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 5: Advanced Engineering & Modular Design</h3>
+                <p>Utilize generator structures, custom package distribution imports, and structural function modifiers.</p>
+                <table>
+                   <tr>
+                        <td><h4>Modules & Package Imports:</h4>Dividing raw source scripts across multi-file architectures using standard custom namespace paths.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Decorators & Meta-Programming:</h4>Injecting supplemental validation layers around base functions utilizing custom wrapper syntax wrappers.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Generators & Iterators:</h4>Optimizing system memory consumption patterns when handling massive scales using lazy iteration loops (`yield`).</td>
+                    </tr>
+                </table>
+               
+                <button onclick="Register(event)">Register</button>
+                <button class="home" onclick="hideDetails()">Back to courses</button>
+        </div>
+
+        <div class="course-d" style="display: none;">
+                <h1>MONOGO DB</h1>
+                <h2>Course Overview</h2>
+                <p>Ditch traditional tables and embrace the scalability of modern NoSQL document databases. This developer course explores how to model flexible data relationships using BSON documents, construct advanced querying pipelines, and leverage indexing strategies for rapid real-time lookups in enterprise applications.</p>
+                
+                <h3>Module 1: NoSQL Core Design Architecture</h3>
+                <p>Contrast traditional structural constraints with document layouts to construct dynamic data objects.</p>
+                <table>
+                   <tr>
+                        <td><h4>JSON & BSON Formatting:</h4>Mapping hierarchical data entities into binary-encoded serialization formats.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Dynamic Schema Configurations:</h4>Managing flexible schemas that easily adjust to rapid feature variations without downtime alterations.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>CRUD Foundations:</h4>Executing baseline storage behaviors using direct terminal methods (`insertOne`, `find`, `updateOne`, `deleteOne`).</td>
+                    </tr>
+                </table>
+
+                <h3>Module 2: Document Relationship Modeling</h3>
+                <p>Balance data performance metrics by applying embedding or referencing design patterns based on system access needs.</p>
+                <table>
+                   <tr>
+                        <td><h4>Embedded Document Layouts:</h4>Optimizing data locality by placing nested sub-objects directly within parent records.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Normalized References:</h4>Linking documents across discrete namespaces using manual reference IDs or DBRefs.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Pattern Decision Frameworks:</h4>Analyzing data access paths to choose between embedded or referenced relationships.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 3: Advanced Queries & Filtering Tools</h3>
+                <p>Construct granular search paths using logical operators, field tracking arrays, and element modifiers.</p>
+                <table>
+                   <tr>
+                        <td><h4>Comparison & Logical Operators:</h4>Filtering dataset collections with nested boundary markers (`$gt`, ` $lt`, `$and`, `$or`).</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Array Evaluation:</h4>Querying nested list arrays using multi-match conditions and target range controls (`$elemMatch`, `$all`).</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Projection Mapping:</h4>Reducing transfer bandwidth by returning only specific fields from database documents.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 4: The Aggregation Framework</h3>
+                <p>Build multi-stage data transforming pipelines to calculate real-time analytics directly inside the database cluster.</p>
+                <table>
+                   <tr>
+                        <td><h4>Pipeline Filtering Phases:</h4>Using `$match` and `$project` operators to filter and isolate target documents early in execution.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Group Aggregations:</h4>Computing running totals, metrics, averages, and group counts using the `$group` stage layout.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Relational Lookups:</h4>Executing high-performance document joins across distinct storage spaces utilizing the `$lookup` step framework.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 5: Performance Engineering & Scalability</h3>
+                <p>Accelerate read-write cycle speeds and manage distributed cluster nodes across live web servers.</p>
+                <table>
+                   <tr>
+                        <td><h4>Indexing Operations:</h4>Bypassing slow collection scans by deploying single-field, compound, and text indices.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Replication Sets:</h4>Guaranteeing high availability and automatic failovers by setting up primary-secondary cluster nodes.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Sharding Architectures:</h4>Achieving horizontal scale out across server arrays by distributing shards evenly via partition keys.</td>
+                    </tr>
+                </table>
+               
+                <button onclick="Register(event)">Register</button>
+                <button class="home" onclick="hideDetails()">Back to courses</button>
+        </div>
+
+        <div class="course-d" style="display: none;">
+                <h1>DATA SCIENCE</h1>
+                <h2>Course Overview</h2>
+                <p>Transform raw, unorganized data into actionable business value. This interdisciplinary curriculum combines exploratory analytics, automated feature engineering, and statistical modeling with core visualization frameworks, giving you the complete toolset to build predictive dashboards and uncover hidden trends.</p>
+                
+                <h3>Module 1: Exploratory Analytics & Statistical Tools</h3>
+                <p>Apply foundational descriptive metrics and distribution diagnostics to analyze raw data structures.</p>
+                <table>
+                   <tr>
+                        <td><h4>Descriptive Metrics:</h4>Measuring central tendency, data distribution, variance spreads, and standard deviation curves.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Hypothesis Evaluations:</h4>Validating analytical data assumptions using directional $Z$-tests, $t$-tests, and ANOVA setups.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Correlation Testing:</h4>Measuring relationship strengths between target fields using Pearson and Spearman coefficients.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 2: Data Engineering & Transformation (Pandas)</h3>
+                <p>Build programmatic pipelines to clean real-world datasets, manage timeline arrays, and join separate tables.</p>
+                <table>
+                   <tr>
+                        <td><h4>Missing Value Recovery:</h4>Resolving broken data rows safely via targeted filtering, logical replacement fills, or forward/backward imputation methods.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Data Aggregation:</h4>Slicing datasets into categorical summaries with robust pivot tables and multi-key `groupby` operations.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Merging & Reshaping:</h4>Combining mismatched multi-source files using inner, outer, left, and right relational join configurations.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 3: Advanced Business Intelligence Visualization</h3>
+                <p>Design production-ready data graphs, heatmaps, and trend trackers using visualization toolkits.</p>
+                <table>
+                   <tr>
+                        <td><h4>Statistical Charting:</h4>Generating distribution curves, box plots, and scatter indices using Seaborn and Matplotlib.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Interactive Dashboards:</h4>Building real-time analytic dashboard interfaces using web visualization tools like Plotly or Dash.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Geospatial Analysis:</h4>Mapping geographic trends across map layers using coordinates and spatial plot maps.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 4: Machine Learning Modeling Pipelines</h3>
+                <p>Train foundational statistical learning algorithms to solve regression and categorical forecasting tasks.</p>
+                <table>
+                   <tr>
+                        <td><h4>Regression Modeling:</h4>Predicting continuous business metrics using Multiple Linear Regression and Regularization profiles.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Classification Algorithms:</h4>Sorting records into target classes using Naive Bayes, Decision Trees, and K-Nearest Neighbors.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>Unsupervised Structure Discovery:</h4>Grouping target market populations using $K$-Means and reducing feature spaces with Principal Component Analysis (PCA).</td>
+                    </tr>
+                </table>
+
+                <h3>Module 5: Experimental Deployment & Operations</h3>
+                <p>Deploy statistical models as accessible backend microservices and maintain ongoing performance track records.</p>
+                <table>
+                   <tr>
+                        <td><h4>Model Serialization:</h4>Saving trained configurations to disk safely using Pickle or Joblib data storage methods.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>REST API Integration:</h4>Wrapping predictive scripts inside web routes using Flask or FastAPI backends.</td>
+                    </tr>
+                    <tr>
+                        <td><h4>A/B Testing Frameworks:</h4>Configuring testing parameters to validate operational models against live business baseline results.</td>
+                    </tr>
+                </table>
+               
+                <button onclick="Register(event)">Register</button>
+                <button class="home" onclick="hideDetails()">Back to courses</button>
+        </div>
+
+        <div class="course-d" style="display: none;">
+                <h1>CLOUD COMPUTING</h1>
+                <h2>Course Overview</h2>
+                <p>Shift from managing local hardware to configuring highly scalable, on-demand global cloud environments. This system architecture course explores cloud deployment models, virtual resource configurations, containerized hosting, and scalable storage solutions to build reliable modern software platforms.</p>
+                
+                <h3>Module 1: Cloud Architecture Core Frameworks</h3>
+                <p>Learn the fundamental paradigms separating on-premise infrastructure spaces from dynamic distributed cloud environments.</p>
+                <table>
+                   <tr>
+                        <td><h4>Service Archetypes:</h4>Contrasting Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS).</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Deployment Environments:</h4>Evaluating security and performance differences across Public, Private, and Hybrid Cloud architectures.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Hypervisors & Virtual Machines:</h4>Configuring host machine environments to partition system compute units into independent virtual machines.</td>
+                   </tr>
+                </table>
+
+                <h3>Module 2: Compute Instances & Virtual Networks</h3>
+                <p>Deploy cloud virtual servers, configure custom subnets, and protect incoming traffic pathways.</p>
+                <table>
+                   <tr>
+                        <td><h4>Compute Resource Provisioning:</h4>Spinning up and managing virtual machine instances (e.g., AWS EC2, Azure VM) with custom system specifications.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Virtual Private Networks:</h4>Isolating backend infrastructure groups within custom software-defined Virtual Private Clouds (VPCs).</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Cloud Access Controls:</h4>Configuring security groups and Network Access Control Lists (NACLs) to manage inbound web traffic.</td>
+                    </tr>
+                </table>
+
+                <h3>Module 3: Scalable Cloud Storage & Distributed File Systems</h3>
+                <p>Choose between structured object buckets, file volumes, or database instances to manage varying data scales securely.</p>
+                <table>
+                   <tr>
+                        <td><h4>Object Storage Services:</h4>Deploying unstructured file storage solutions (e.g., AWS S3, Google Cloud Storage) featuring lifecycle archival policies.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Block & Network File Volumes:</h4>Mounting high-performance storage drives directly to active virtual processing instances.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Managed Cloud Databases:</h4>Configuring highly available cloud-hosted SQL or NoSQL cluster engines featuring automated scaling.</td>
+                   </tr>
+                </table>
+
+                <h3>Module 4: Elasticity, Auto-Scaling & Load Balancing</h3>
+                <p>Architect resilient systems that automatically scale up or down based on real-time traffic volume changes.</p>
+                <table>
+                   <tr>
+                        <td><h4>Load Distribution:</h4>Spreading incoming web requests across healthy backend server pools using Application Load Balancers.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Horizontal Scaling Policies:</h4>Automating compute instance allocation changes when triggered by tracking alerts like high CPU utilization.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>High Availability & Recovery:</h4>Deploying mirror resources across multiple regional Availability Zones to prevent single points of failure.</td>
+                   </tr>
+                </table>
+
+                <h3>Module 5: Containerization & Modern Serverless Paradigms</h3>
+                <p>Package modern microservices inside lightweight isolation runtimes and write decoupled, event-driven functions.</p>
+                <table>
+                   <tr>
+                        <td><h4>Container Runtimes (Docker):</h4>Packaging application code and all its dependencies into portable container images.</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Orchestration Frameworks:</h4>Managing container networking, health checks, and automated deployments using Kubernetes (K8s).</td>
+                   </tr>
+                    <tr>
+                        <td><h4>Serverless Compute Systems:</h4>Running background business logic functions triggered directly by event hooks (e.g., AWS Lambda, Cloud Functions).</td>
+                    </tr>
+                </table>
+               
+                <button onclick="Register(event)">Register</button>
+                <button onclick="hideDetails()">Back to courses</button>
+        </div>
+    </div>    
+
+    <div class="about">
+                <h2>About Course Hub</h2>
+                <p>
+                    Course Hub is a modern learning platform that connects students with
+                    industry-relevant courses. Our mission is to provide quality education,
+                    enhance skills, and empower learners to achieve their career goals.
+                </p>
+                <h2 style="margin-top: 10px;">Courses</h2>
+                <table>
+                    <tr>
+                        <td><span class='bullet'>&bull;</span>Aritifical Intelligence</td>
+                        <td><span class='bullet'>&bull;</span>Machine Learning</td>
+                        <td><span class='bullet'>&bull;</span>Deep Learning</td>
+                    </tr>
+                    <tr>
+
+                        <td><span class='bullet'>&bull;</span>Python</td>
+                        <td><span class='bullet'>&bull;</span>Java</td>
+                        <td><span class='bullet'>&bull;</span>HTML</td>
+                    </tr>
+                    <tr>
+                        <td><span class='bullet'>&bull;</span>CSS</td>
+                        <td><span class='bullet'>&bull;</span>Java Script</td>
+                        <td><span class='bullet'>&bull;</span>Cloud Computing</td>
+                    </tr>
+                    <tr>
+                        <td><span class='bullet'>&bull;</span>Networking</td>
+                        <td><span class='bullet'>&bull;</span>UI/UX Design</td>
+                        <td><span class='bullet'>&bull;</span>Power BI</td>
+                    </tr>
+                    <tr>
+                        <td><span class='bullet'>&bull;</span>Tableau</td>
+                        <td><span class='bullet'>&bull;</span>Cyber Security</td>
+                        <td><span class='bullet'>&bull;</span>Data Science</td>
+                    </tr>
+                    <tr>
+                        <td><span class='bullet'>&bull;</span>SQL</td>
+                        <td><span class='bullet'>&bull;</span>C++</td>
+                        <td><span class='bullet'>&bull;</span>Flutter</td>
+                    </tr>
+                    <tr>
+                        <td><span class='bullet'>&bull;</span>React</td>
+                        <td><span class='bullet'>&bull;</span>Node Js</td>
+                        <td><span class='bullet'>&bull;</span>Monogo DB</td>
+                    </tr>
+
+
+                </table>
+                <p>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </p>
+                <p>coursehub@gamil.com</p>
+    </di>
+    <div class="whatapp-group">
+                <a href="https://chat.whatsapp.com/K39ob6sB0wkCGE89uFocPf">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+    </div>
+            <script src="coursed.js"></script>
+            <script src="script.js"></script>
+            <script src="register.js"></script>
+</body>
+
+</html>

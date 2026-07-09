@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="overlap"></div>
+     <div class="popup">
+    <h2 style="color: black;">Register</h2>
+    <input id="name" type="text" placeholder="Name:" style="color: black;">
+    <input id="email" type="email" placeholder="E-mail:">
+    <div>
+        <p class="course-choose">
+            
+        </p>
+    </div>   
+    <select id="Category" name="Category" required>
+        <option value="" disabled selected>Select Your Category</option>
+        <option>Student</option>
+        <option>Working Professional</option>
+        <option>Under Graduate</option>
+        <option>Post Graduate</option>
+        <option>Other</option>
+    </select>
+    <input id="phone-no" type="number" placeholder="Phone No:">
+    <div>
+      <button id="submit">Submit</button>
+      <button onclick="Cancel()">Cancel</button>
+    </div>
+
+    
+</div>
+    
+    <div class="nav-bar">
+        <div class="side-nav" onclick="Show()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <h1>Course Hub</h1>
+        <div class="nav-bar-links">
+            <a href="main.html"><p>Home</p></a>
+            <a href="course.html"><p>Courses</p></a>
+            <a href="register.html"><p>Registered</p></a>
+            <a href="contact.html"><p>Contact Us</p></a>
+            
+        </div>
+        
+    </div>
+
+    <div class="side-nav-container">
+        <p style="color:white;text-align: right; padding: 5px;" onclick="hide()">
+            <i class="fa solid fa-xmark"></i>
+        </p>
+        
+         <div class="nav-bar-link">
+            <a href="main.html"><p>Home</p></a>
+            <a href="course.html"><p>Courses</p></a>
+            <a href="register.html"><p>Registered</p></a>
+            <a href="contact.html"><p>Contact Us</p></a>
+        </div>
+
+
+
+    </div>
+    </div>
+
+     <div class="contact-form">
+        <div class="feild">
+            <h3>Contact Us</h3>
+            <h5>Name:</h5>
+            <div>
+                <input type="text">
+            </div>
+        </div>
+        <div class="feild">
+            <h5>E-mail:</h5>
+            <div>
+                <input type="email">
+            </div>
+        </div>
+        <div class="feild">
+            <h5>Message:</h5>
+            <div>
+                <textarea></textarea>
+            </div>
+            <button>Submit</button>
+        </div>
+        
+       
+
+    </div>
+
+
+<section class="about">
+    <h2>About Course Hub</h2>
+    <p>
+        Course Hub is a modern learning platform that connects students with
+        industry-relevant courses. Our mission is to provide quality education,
+        enhance skills, and empower learners to achieve their career goals.
+    </p>
+    <h2 style="margin-top: 10px;">Courses</h2>
+    <table>
+         <tr>
+            <td><span class='bullet'>&bull;</span>Aritifical Intelligence</td>
+            <td><span class='bullet'>&bull;</span>Machine Learning</td>
+            <td><span class='bullet'>&bull;</span>Deep Learning</td>
+        </tr>
+        <tr>
+            
+            <td><span class='bullet'>&bull;</span>Python</td>
+            <td><span class='bullet'>&bull;</span>Java</td>
+            <td><span class='bullet'>&bull;</span>HTML</td>
+        </tr>
+        <tr>
+            <td><span class='bullet'>&bull;</span>CSS</td>
+            <td><span class='bullet'>&bull;</span>Java Script</td>
+            <td><span class='bullet'>&bull;</span>Cloud Computing</td>
+        </tr>
+        <tr>
+            <td><span class='bullet'>&bull;</span>Networking</td>
+            <td><span class='bullet'>&bull;</span>UI/UX Design</td>
+            <td><span class='bullet'>&bull;</span>Power BI</td>
+        </tr>
+        <tr>
+            <td><span class='bullet'>&bull;</span>Tableau</td>
+            <td><span class='bullet'>&bull;</span>Cyber Security</td>
+            <td><span class='bullet'>&bull;</span>Data Science</td>
+        </tr>
+        <tr>
+            <td><span class='bullet'>&bull;</span>SQL</td>
+            <td><span class='bullet'>&bull;</span>C++</td>
+            <td><span class='bullet'>&bull;</span>Flutter</td>
+        </tr>
+         <tr>
+            <td><span class='bullet'>&bull;</span>React</td>
+            <td><span class='bullet'>&bull;</span>Node Js</td>
+            <td><span class='bullet'>&bull;</span>Monogo DB</td>
+        </tr>
+       
+
+    </table>
+    <p>
+        <i class="fa-brands fa-instagram"></i>
+           <i class="fa-brands fa-twitter"></i>
+           <i class="fa-brands fa-facebook"></i>
+    </p>
+    <p>coursehub@gamil.com</p>
+</section>
+<div class="whatapp-group">
+    <a href="https://chat.whatsapp.com/K39ob6sB0wkCGE89uFocPf">
+         <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+</div>
+
+    <script src="script.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>
