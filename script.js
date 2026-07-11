@@ -1,12 +1,15 @@
 
 var sidenavcontainer = document.querySelector(".side-nav-container");
+var overlay= document.querySelector(".overlay");
 
 function Show() {
     sidenavcontainer.style.left = "0";
+    overlay.style.display = "block";
 }
 
 function hide() {
     sidenavcontainer.style.left = "-60%";
+      overlay.style.display = "none";
 }
 
 function Cancel() {
