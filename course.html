@@ -12,36 +12,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="image/logo course_hub.png.png">        
 </head>
 
 <body>
 
     <div class="overlap"></div>
     <div class="popup">
-        <h2 style="color: black;">Register</h2>
-        <input id="name" type="text" placeholder="Name:" style="color: black;"">
-    <input  id=" email" type="email" placeholder="E-mail:">
-        <div>
-            <p class="course-choose">
-
-            </p>
-        </div>
-        <select id="Category" name="Category" required>
-            <option value="" disabled selected>Select Your Category</option>
-            <option>Student</option>
-            <option>Working Professional</option>
-            <option>Under Graduate</option>
-            <option>Post Graduate</option>
-            <option>Other</option>
-        </select>
-        <input id="phone-no" type="number" placeholder="Phone No:">
-        <div>
-            <button id="submit">Submit</button>
-            <button onclick="Cancel()">Cancel</button>
-        </div>
-
-
+    <h2 style="color: black;">Register</h2>
+    <input id="name" type="text" placeholder="Name:" style="color: black;">
+    <input id="email" type="email" placeholder="E-mail:">
+    <div>
+        <p class="course-choose"></p>
+    </div> 
+    <select id="Category" name="Category" required>
+        <option value="" disabled selected>Select Your Category</option>
+        <option>Student</option>
+        <option>Working Professional</option>
+        <option>Under Graduate</option>
+        <option>Post Graduate</option>
+        <option>Other</option>
+    </select>
+    <input id="phone-no" type="number" placeholder="Phone No:">
+    <div>
+        <button id="submit">Submit</button>
+        <button onclick="Cancel()">Cancel</button>
     </div>
+</div>
+    
     <div class="nav-bar">
         <div class="side-nav" onclick="Show()">
             <i class="fa-solid fa-bars"></i>
@@ -59,6 +57,12 @@
             </a>
             <a href="contact.html">
                 <p>Contact Us</p>
+            </a>
+             <a href="index.html">
+                <P>Login</P>
+            </a>
+             <a href="signup.html">
+                <P>Sign up</P>
             </a>
         </div>
 
@@ -82,6 +86,12 @@
             <a href="contact.html">
                 <p>Contact Us</p>
             </a>
+             <a href="index.html">
+                <P>Login</P>
+            </a>
+             <a href="signup.html">
+                <P>Sign up</P>
+            </a>
         </div>
 
 
@@ -100,145 +110,145 @@
         </div>
 
         <h1 style="padding: 20px;margin-top: 20px;" class="wanted">Courses</h1>
-        <div class="courses" style="display: flex;">
+        <div class="courses show-courses">
             <div class="course-box">
                 <img src="image/ai.jpg" width="200" height="200">
                 <h3 class="course-name">Artifical Intelligence</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/ml.jpg" width="200" height="200">
                 <h3 class="course-name">Machine Learning</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/deep.jpg" width="200" height="200">
                 <h3 class="course-name">Deep Learning</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/cybersecurity.jpg" width="200" height="200">
                 <h3 class="course-name">Cyber Security</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/python2.jpg" width="200" height="200">
                 <h3 class="course-name">Python</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/ds.jpg" width="200" height="200">
                 <h3 class="course-name">Data Science</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/monogo.jpg" width="200" height="200">
-                <h3 class="course-name">Monogo DB</h3>
+                <h3 class="course-name">Mongo DB</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/cloud.jpg" width="200" height="200">
                 <h3 class="course-name">Cloud Computing</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/uiux.jpg" width="200" height="200">
                 <h3 class="course-name">UI/UX design</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/html.jpg" width="200" height="200">
                 <h3 class="course-name">HTML</h3>
                 <div>
-                    <button onclick="More(event,'html-card')">More</button>
+                    <button onclick="More(event,'html-card')">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/css.jpg" width="200" height="200">
                 <h3 class="course-name">CSS</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/js (2).jpg" width="200" height="200">
                 <h3 class="course-name">Java Script</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/powerbi.jpg" width="200" height="200">
                 <h3 class="course-name">Power BI</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/node.jpg" width="200" height="200">
                 <h3 class="course-name">Node Js</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/flutter.jpg" width="200" height="200">
                 <h3 class="course-name">Flutter</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/react.jpg.jpg" width="200" height="200">
                 <h3 class="course-name">React</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/sql.jpg" width="200" height="200">
                 <h3 class="course-name">SQL</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/c++.jpg" width="200" height="200">
                 <h3 class="course-name">C++</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/networking.jpg" width="200" height="200">
                 <h3 class="course-name">Networking</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
             <div class="course-box">
                 <img src="image/tableau.jpg" width="200" height="200">
                 <h3 class="course-name">Tableau</h3>
                 <div>
-                    <button onclick="More(event)">More</button>
+                    <button onclick="More(event)">More<i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -366,7 +376,7 @@
             </table>
 
             <button onclick="Register(event)">Register</button>
-            <button class="home" onclick="hideDetails()" onclick="window.history.back()">Back to courses</button>
+            <button class="home" onclick="hideDetails()" onclick="window.history.back()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
 
         </div>
         <div class="course-d" style="display: none;">
@@ -498,7 +508,7 @@
             </table>
 
             <button onclick="Register(event)">Register</button>
-            <button class="home" onclick="hideDetails()">Back to courses</button>
+            <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
 
         </div>
         <div class="course-d" style="display: none;">
@@ -630,7 +640,7 @@
             </table>
 
             <button onclick="Register(event)">Register</button>
-            <button class="home" onclick="hideDetails()">Back to courses</button>
+            <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
 
         </div>
         <div class="course-d" style="display: none;">
@@ -761,7 +771,7 @@
             </table>
 
             <button onclick="Register(event)">Register</button>
-            <button class="home" onclick="hideDetails()">Back to courses</button>
+            <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -891,7 +901,7 @@
             </table>
 
             <button onclick="Register(event)">Register</button>
-            <button class="home" onclick="hideDetails()">Back to courses</button>
+            <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -1021,7 +1031,7 @@
             </table>
 
             <button onclick="Register(event)">Register</button>
-            <button class="home" onclick="hideDetails()">Back to courses</button>
+            <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -1151,7 +1161,7 @@
             </table>
 
             <button onclick="Register(event)">Register</button>
-            <button class="home" onclick="hideDetails()">Back to courses</button>
+            <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -1281,7 +1291,7 @@
             </table>
 
             <button onclick="Register(event)">Register</button>
-            <button class="home" onclick="hideDetails()">Back to courses</button>
+            <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
         <div class="course-d" style="display: none;">
                 <h1>UI/UX DESIGN</h1>
@@ -1329,7 +1339,7 @@
                 </table>
                
                 <button onclick="Register(event)">Register</button>
-                <button class="home" onclick="hideDetails()">Back to courses</button>
+                <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -1378,7 +1388,7 @@
                 </table>
                
                 <button onclick="Register(event)">Register</button>
-                <button class="home" onclick="hideDetails()">Back to courses</button>
+                <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -1427,7 +1437,7 @@
                 </table>
                
                 <button onclick="Register(event)">Register</button>
-                <button class="home" onclick="hideDetails()">Back to courses</button>
+                <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -1476,7 +1486,7 @@
                 </table>
                
                 <button onclick="Register(event)">Register</button>
-                <button class="home" onclick="hideDetails()">Back to courses</button>
+                <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -1525,7 +1535,7 @@
                 </table>
                
                 <button onclick="Register(event)">Register</button>
-                <button class="home" onclick="hideDetails()">Back to courses</button>
+                <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -1574,7 +1584,7 @@
                 </table>
                
                 <button onclick="Register(event)">Register</button>
-                <button class="home" onclick="hideDetails()">Back to courses</button>
+                <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -1623,7 +1633,7 @@
                 </table>
                
                 <button onclick="Register(event)">Register</button>
-                <button class="home" onclick="hideDetails()">Back to courses</button>
+                <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -1672,7 +1682,7 @@
                 </table>
                
                 <button onclick="Register(event)">Register</button>
-                <button class="home" onclick="hideDetails()">Back to courses</button>
+                <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -1721,7 +1731,7 @@
                 </table>
                
                 <button onclick="Register(event)">Register</button>
-                <button class="home" onclick="hideDetails()">Back to courses</button>
+                <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -1770,7 +1780,7 @@
                 </table>
                
                 <button onclick="Register(event)">Register</button>
-                <button class="home" onclick="hideDetails()">Back to courses</button>
+                <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -1819,7 +1829,7 @@
                 </table>
                
                 <button onclick="Register(event)">Register</button>
-                <button class="home" onclick="hideDetails()">Back to courses</button>
+                <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
 
         <div class="course-d" style="display: none;">
@@ -1868,7 +1878,7 @@
                 </table>
                
                 <button onclick="Register(event)">Register</button>
-                <button class="home" onclick="hideDetails()">Back to courses</button>
+                <button class="home" onclick="hideDetails()"><i class="fa-solid fa-arrow-left"></i>Back to courses</button>
         </div>
     </div>
     <section class="about">

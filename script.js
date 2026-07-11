@@ -34,11 +34,10 @@ function started() {
 
     start.style.backgroundColor = "gray";
     start.style.color = "black";
+    
+    courses.classList.add("show-courses");
+    wanted.classList.add("show-courses");
 
-    courses.style.display = "flex";
-    wanted.style.display = "block";
-
-    courses.setAttribute("display", "flex");
 }
 
 
@@ -100,6 +99,27 @@ search.addEventListener("keyup", function() {
 
     }
 
+});
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    // Prevent the page from automatically refreshing on submit
+    event.preventDefault();
+
+    // Get value strings from all fields
+    const name = document.getElementById("contactName").value.trim();
+    const email = document.getElementById("contactEmail").value.trim();
+    const phone = document.getElementById("contactPhone").value.trim();
+    const feedback = document.getElementById("contactFeedback").value.trim();
+
+    // Check if any fields are completely empty
+    if (name === "" || email === "" || phone === "" || feedback === "") {
+        alert("Please enter all details in the contact section.");
+    } else {
+        // Successful message pop-up
+        alert(`Thank you, ${name}! Your form has been submitted successfully.`);
+        
+        // Optional: Reset the form fields back to blank after clicking OK
+        this.reset();
+    }
 });
 
 
